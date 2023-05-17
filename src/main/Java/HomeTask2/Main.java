@@ -7,5 +7,6 @@ public class Main {
         System.out.println("Результат віднімання дорівнює " + calculator.Min (29,8));
         System.out.println("Результат множення дорівнює " + calculator.Mult (11,11));
         System.out.println("Результат ділення дорівнює " + calculator.Div (100,5));
+        System.out.println("Результат ділення дорівнює " + calculator.Div (25,0));
     }
 }
