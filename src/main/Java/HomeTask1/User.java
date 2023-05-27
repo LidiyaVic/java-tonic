@@ -18,7 +18,16 @@ package src.main.Java.HomeTask1;
  * де треба створити декілька екземплярів класса User з різними значеннями,
  * повикликати методи, в кінці програми вивести суму витрачених грошей, кожного юзера та інформацію про нього
  */
+
 public class User {
+
+    public String userName;
+    private int age;
+    public String email;
+    private String password;
+    public boolean isActive;
+    public int amountSpentMoney;
+    public int percent;
 
     public User() {
 
@@ -33,20 +42,23 @@ public class User {
         this.password = password;
     }
 
-    public String userName;
-    private int age;
-    public String email;
-    private String password;
-    public boolean isActive;
-    public int amountSpentMoney;
-
-    public int makePurchase(double purchasePrice) {
+    public void makePurchase(double purchasePrice) {
+        this.amountSpentMoney += purchasePrice;
         System.out.println("Сума, на яку здійснена покупка " + purchasePrice);
-        return 0;
     }
 
-    public int printTotalAmountOfSpentMoney(int a, int b) {
-        return a + b;
+    public void printTotalAmountOfSpentMoney() {
+        System.out.println("Загальна сума покупки " + amountSpentMoney);
+    }
+
+    /**
+     * Додати в класс User метод addDiscount, який приймає параметр відсоток знижки(percent типу int),
+     * та вираховує знижку для amountSpentMoney
+     */
+
+    public void addDiscount(int percent) {
+        int discount = (amountSpentMoney * percent) / 100;
+        System.out.println("Сума знижки " + discount);
     }
 
     public int getAge() {
@@ -54,7 +66,11 @@ public class User {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Не вірно вказано вік");
+        }
     }
 
     public String getPassword() {
@@ -62,6 +78,10 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        if (password.length() > 8) {
+            this.password = password;
+        } else {
+            System.out.println("Пароль не валідний");
+        }
     }
 }
