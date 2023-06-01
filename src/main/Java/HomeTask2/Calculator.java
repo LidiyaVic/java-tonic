@@ -22,10 +22,16 @@ public class Calculator {
      * В калькуляторі, в методі ділення, краще додати перевірку другого параметра на 0.
      */
     public static int Div(int a, int b) {
-        if (b == 0) {
-            System.out.println("Помилка. Ділення на нуль");
-            throw new ArithmeticException("Ділення на 0");
+        try {
+            if (b == 0) {
+                throw new ArithmeticException("Ділення на нуль");
+            } else {
+                return a / b;
+            }
+        } catch (ArithmeticException e) {
+            System.out.println("\n" +
+                    "Сталася арифметична помилка: " + e.getMessage());
+            return 0;
         }
-        return a / b;
     }
 }
