@@ -33,4 +33,16 @@ package src.main.Java.HomeTask9.Color;
     public String getHexCode() {
         return hexCode;
     }
+
+    public static String lemonColor() {
+        return Color.LEMON + " " + Color.LEMON.getHexCode();
+    }
+
+    public static String lavenderColor() {
+        return Color.LAVENDER + " " + Color.LAVENDER.getHexCode();
+    }
+
+    public static String ivoryColor() {
+        return Color.IVORY + " " + Color.IVORY.getHexCode();
+    }
 }
