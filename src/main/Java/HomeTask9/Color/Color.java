@@ -10,17 +10,17 @@ package src.main.Java.HomeTask9.Color;
  public enum Color {
         LAVENDER("#B57EDC") {
             public String toString() {
-                return "Lavender color";
+                return "Lavender color " + getHexCode();
             }
         },
         LEMON("#FDE910") {
             public String toString() {
-                return "Lemon color";
+                return "Lemon color " + getHexCode();
             }
         },
         IVORY("#FFFFF0") {
             public String toString() {
-                return "Ivory color";
+                return "Ivory color " + getHexCode();
             }
         };
 
@@ -32,17 +32,5 @@ package src.main.Java.HomeTask9.Color;
 
     public String getHexCode() {
         return hexCode;
-    }
-
-    public static String lemonColor() {
-        return Color.LEMON + " " + Color.LEMON.getHexCode();
-    }
-
-    public static String lavenderColor() {
-        return Color.LAVENDER + " " + Color.LAVENDER.getHexCode();
-    }
-
-    public static String ivoryColor() {
-        return Color.IVORY + " " + Color.IVORY.getHexCode();
     }
 }

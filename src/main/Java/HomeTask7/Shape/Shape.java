@@ -8,6 +8,8 @@
  */
 package src.main.Java.HomeTask7.Shape;
 
+import src.main.Java.HomeTask9.Color.Color;
+
 import java.util.Objects;
 
 abstract class Shape {
@@ -29,8 +31,8 @@ class Circle extends Shape {
     private final double centerX;
     private final double centerY;
 
-    public Circle(String color, double radius, double centerX, double centerY) {
-        super(color);
+    public Circle(Color color, double radius, double centerX, double centerY) {
+        super(String.valueOf(color));
         this.radius = radius;
         this.centerX = centerX;
         this.centerY = centerY;
@@ -83,8 +85,8 @@ class Rectangle extends Shape {
     private final double topLeftX;
     private final double topLeftY;
 
-    public Rectangle(String color, double width, double height, double topLeftX, double topLeftY) {
-        super(color);
+    public Rectangle(Color color, double width, double height, double topLeftX, double topLeftY) {
+        super(String.valueOf(color));
         this.width = width;
         this.height = height;
         this.topLeftX = topLeftX;
@@ -144,8 +146,8 @@ class Triangle extends Shape {
     private final double side2;
     private final double side3;
 
-    public Triangle(String color, double x1, double y1, double x2, double y2, double x3, double y3) {
-        super(color);
+    public Triangle(Color color, double x1, double y1, double x2, double y2, double x3, double y3) {
+        super(String.valueOf(color));
         this.x1 = x1;
         this.y1 = y1;
         this.x2 = x2;
